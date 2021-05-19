@@ -37,3 +37,26 @@ tlink* search_path(tlink* root, char* path) {
 	free_paths(paths);
 	return temp_node;
 }
+
+
+void print_tree(tlink* root) {
+
+	int i;
+
+	if(root == NULL)
+		return;
+
+	printf("%s\n", root->value);
+
+	for(i = 0; i<root->n; i++) 
+		printf("%s\n", root->children[i]->value);
+
+	print_tree(*(root->children++));
+}
+
+
+void free_tree(tlink* root) {
+
+	int i = 0;
+
+}
