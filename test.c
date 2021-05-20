@@ -60,3 +60,22 @@ void free_tree(tlink* root) {
 	int i = 0;
 
 }
+
+
+
+void insert_hash(hlink* table, char** paths) {
+
+
+
+
+}
+
+
+
+void fill_hash_pos(hlink* table, char* path) {
+
+	int hash = hash(path);
+
+	if(isEmpty(table, hash))
+		fill_emptyHash
+}
