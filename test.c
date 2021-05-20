@@ -79,3 +79,27 @@ void fill_hash_pos(hlink* table, char* path) {
 	if(isEmpty(table, hash))
 		fill_emptyHash
 }
+
+
+/* builds all the necessary tree nodes, from the head given until the last sub-path of paths */
+tlink* build_from_root(tlink* root, char** paths, char* val) {
+
+	int i;
+	tlink*
+	tlink* Next_node = NULL;
+
+	for(i = 0; paths[i] != NULL; i++) {
+		
+		head->path = paths[i];
+		head->children = (tlink**) realloc(head->children, sizeof(tlink*)*((head->n)+1));
+
+		Next_node = New_tlink(NULL, NULL);
+
+		head->children[head->n] = Next_node;
+		head->n++;
+
+		head = Next_node;
+	}
+
+	head->value = val;
+	return head;
